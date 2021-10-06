@@ -1,0 +1,21 @@
+<h1>Products</h1>
+
+<table>
+    <thead>
+    <tr>
+    <th> Nome <th>
+    <th> Valor <th>
+    <th> Restaurante <th>
+    </tr>
+    </thead>
+
+    <tbody>
+        <% @products.each do |p| %>
+            <tr>
+                <th><%= p.name %><th>
+                <th><%= p.value %><th>
+                <th><%= p.restaurantt.name %><th>
+            <tr>
+        <% end %>
+    </tbody>
+</table>

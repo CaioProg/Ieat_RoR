@@ -1,0 +1,21 @@
+<%= form_with(model: product, local: true) do |form| %>
+    <div class="field">
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+    </div>
+
+    <div class="field">
+        <%= form.label :value %>
+        <%= form.text_field :value %>
+    </div>
+
+    <div class="field">
+        <%= form.label :restaurantt %>
+        <%= form.collection_select(:restaurantt_id, Restaurantt.order(:name), :id, :name, include_blank: true) %>
+    </div>
+
+    <div class="actions">
+    <%= form.submit %>
+    </div>
+
+<% end %>
